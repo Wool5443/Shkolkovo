@@ -1,0 +1,48 @@
+\documentclass[14pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russianb]{babel}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{array}
+\usepackage[pdftex]{graphicx}
+\usepackage{comment}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\usepackage{verbatim}
+
+
+\graphicspath{{images/}}
+\renewcommand{\baselinestretch}{1.3}
+
+\begin{document}
+
+Для каждой операции нам нужно знать адрес, наименование товара и его вес.
+Поместим адрес в столбец G, для этого в G2 запишем формулу и растянем:
+\begin{center}
+    =ВПР(C2;\$Магазин.A:C;3;0)
+\end{center}
+Наименование товара поместим в столбец H, в H2 запишем и растянем:
+\begin{center}
+    =ВПР(D2;\$Товар.A:F;3;0)
+\end{center}
+Вес одной единицы товара поместим в столбец I, в I2 запишем и растянем:
+\begin{center}
+    =ВПР(D2;\$Товар.A:F;5;0)
+\end{center}
+Теперь посчитаем общий вес операции, записав в J2 следующую формулу и растянув:
+\begin{center}
+    =I2*E2
+\end{center}
+
+Далее нужно применить фильтры. Сначала поставим фильтр на дату от 2 до 10 августа включительно, затем поставим тип операции "Поступление". Выберем адреса на проспекте Революции, в товарах выберем все виды зефира. Скопируем полученную таблицу на новый лист и посчитаем ответ. В K2 запишем:
+\begin{center}
+    =СУММ(J:J)/1000
+\end{center}
+Получим ответ 3570 кг.
+
+\end{document}
