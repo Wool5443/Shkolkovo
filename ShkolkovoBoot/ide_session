@@ -1,0 +1,5 @@
+cd ~/Documents/Work/Shkolkovo
+
+launch nvim .
+new_tab
+cd ~/Documents/Work/Shkolkovo

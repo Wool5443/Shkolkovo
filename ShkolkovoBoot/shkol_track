@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+from math import floor
+
+
+def round_half_up(n, decimals=0):
+    multiplier = 10**decimals
+    return floor(n * multiplier + 0.5) / multiplier
+
+
+minutes = 0
+hours = 0.0
+ok = False
+
+while not ok:
+    try:
+        minutes = int(input("Input time in minutes:\n"))
+        hours = round_half_up(minutes / 60, 1)
+        ok = True
+    except Exception:
+        print("Wrong number, try again")
+
+print(str(hours).replace(".", ","))

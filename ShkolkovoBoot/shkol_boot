@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+kitty --session ~/Documents/Work/ShkolkovoBoot/scripts_session & disown
+kitty --session ~/Documents/Work/ShkolkovoBoot/ide_session & disown
+kitty --session ~/Documents/Work/ShkolkovoBoot/open_session & disown
+nautilus ~/Documents/Work/Shkolkovo/ & disown
+
+exit

@@ -1,0 +1,19 @@
+#!/usr/bin/python
+from webbrowser import open
+
+
+number = input()
+
+while number != "q":
+    good = True
+    try:
+        int(number)
+    except Exception:
+        good = False
+        print("Wrong number, try again")
+
+    if good:
+        url = f"https://3.shkolkovo.online/catalog/4936/{number}?SubjectId=30"
+        open(url)
+
+    number = input()

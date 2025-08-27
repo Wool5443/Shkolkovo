@@ -1,0 +1,59 @@
+\documentclass[14pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russianb]{babel}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{array}
+\usepackage[pdftex]{graphicx}
+\usepackage{comment}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\usepackage{verbatim}
+
+
+\graphicspath{{images/}}
+\renewcommand{\baselinestretch}{1.3}
+
+\begin{document}
+
+По каналу связи передаются шифрованные сообщения, содержащие только
+десять букв: А, B, C, D, E, F, S, X, Y, Z; для передачи используется
+неравномерный двоичный код. Для кодирования букв используются
+кодовые слова.
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Буква} & \textbf{Кодовое слово} \\ \hline
+		$A$        & 00                     \\ \hline
+		$B$        &                        \\ \hline
+		$C$        & 010                    \\ \hline
+		$D$        & 011                    \\ \hline
+		$E$        & 1011                   \\ \hline
+	\end{tabular}
+	\quad
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Буква} & \textbf{Кодовое слово} \\ \hline
+		$F$        & 1001                   \\ \hline
+		$S$        & 1100                   \\ \hline
+		$X$        & 1010                   \\ \hline
+		$Y$        & 1101                   \\ \hline
+		$Z$        & 111                    \\ \hline
+	\end{tabular}
+\end{center}
+
+Укажите кратчайшее кодовое слово для буквы $B$, при котором код
+удовлетворяет условию Фано. Если таких кодов несколько, укажите код с
+\textbf{наименьшим} числовым значением.
+
+\textit{Примечание}. Условие Фано означает, что никакое кодовое слово
+не является началом другого кодового слова. Это обеспечивает
+возможность однозначной расшифровки закодированных сообщений.
+
+\end{document}

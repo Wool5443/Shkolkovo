@@ -1,0 +1,69 @@
+digraph
+{
+    rankdir = TB;
+    edge[color = "#f646dc"]
+    node[shape = record, color = "#000000", fontsize = 10, style =     "filled", fillcolor = "#fae2f6", label = ""];
+    bgcolor = "#00000000";
+    root
+
+    t0[label = "{0}"];
+    t1[label = "{1}"];
+    t00[label = "{00|A}"];
+    t01[label = "{01}"];
+    t10[label = "{10}"];
+    t11[label = "{11}"];
+    t000[style = invis];
+    t001[style = invis];
+    t010[label = "{010|C}"];
+    t011[label = "{011|D}"];
+    t100[label = "{100}"];
+    t101[label = "{101}"];
+    t110[label = "{110}"];
+    t111[label = "{111|Z}"];
+    t0000[style = invis];
+    t0001[style = invis];
+    t0010[style = invis];
+    t0011[style = invis];
+    t0100[style = invis];
+    t0101[style = invis];
+    t0110[style = invis];
+    t0111[style = invis];
+    t1000[label = "{1000}"];
+    t1001[label = "{1001|F}"];
+    t1010[label = "{1010|X}"];
+    t1011[label = "{1011|E}"];
+    t1100[label = "{1100|S}"];
+    t1101[label = "{1101|Y}"];
+    t1110[style = invis];
+    t1111[style = invis];
+    root->{t0, t1}
+    t0->t00;
+    t0->t01;
+    t1->t10;
+    t1->t11;
+    t00->t000[style = invis];
+    t00->t001[style = invis];
+    t01->t010;
+    t01->t011;
+    t10->t100;
+    t10->t101;
+    t11->t110;
+    t11->t111;
+    t000->t0000[style = invis];
+    t000->t0001[style = invis];
+    t001->t0010[style = invis];
+    t001->t0011[style = invis];
+    t010->t0100[style = invis];
+    t010->t0101[style = invis];
+    t011->t0110[style = invis];
+    t011->t0111[style = invis];
+    t100->t1000;
+    t100->t1001;
+    t101->t1010;
+    t101->t1011;
+    t110->t1100;
+    t110->t1101;
+    t111->t1110[style = invis];
+    t111->t1111[style = invis];
+
+}
