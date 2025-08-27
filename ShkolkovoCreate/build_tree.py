@@ -14,6 +14,7 @@ INTRO = \
     """
 digraph
 {
+    graph [dpi = 300];
     rankdir = TB;
     edge[color = "#f646dc"]
     node[shape = record, color = "#000000", fontsize = 10, style = \
