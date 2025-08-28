@@ -1,0 +1,71 @@
+\documentclass[14pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russianb]{babel}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+
+\usepackage{array}
+\usepackage[pdftex]{graphicx}
+\usepackage{comment}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\usepackage{verbatim}
+
+
+\graphicspath{{images/}}
+\renewcommand{\baselinestretch}{1.3}
+
+\begin{document}
+
+Для решения напишем программу. Откроем файл и считаем из него числа.
+Затем нужно найти максимальное число в файле, оканчивающееся на \textbf{13}.
+Чтобы посмотреть, на какие 2 цифры оканичвается число, можно
+посмотреть его остаток от деления на 100. Введём счётчик подходящих
+троек и переменную для максимальной суммы.
+
+Далее нужно пройтись по тройкам, посчитать у каждой сумму и сколько в
+ней трёхзначных чисел. Подходящими парами являются пары, в которых
+\textbf{2 трёхзначных числа}, а сумма \textbf{не больше}
+максимального числа \textbf{в файле}, кратного \textbf{13}.
+
+\begin{verbatim}
+# Открываем файл
+file = open("17_2024.txt")
+
+# Считываем числа из файла
+numbers = [int(s) for s in file]
+
+# Находим максимальное число, оканчивающееся на 13
+max_div13 = max(x for x in numbers if x % 100 == 13)
+
+# Вводим счётчик подходящик троек и переменную для максимальной суммы
+count = 0
+max_sum = 0
+
+# Проходимся по тройкам
+for i in range(len(numbers) - 2):
+    # Срезом берём текущую тройку
+    triplet = numbers[i:i+3]
+    # Находим сумму тройки
+    triplet_sum = sum(triplet)
+    # Считаем, сколько трёхзначных чисел в тройке
+    count_three_digits = sum(100 <= x <= 999 for x in triplet)
+
+    # Проверяем, что два трёхзначных чисел
+    # и сумма тройки не больше максимального числа, кратного 13
+    if count_three_digits == 2 and triplet_sum <= max_div13:
+        # Увеличиваем счётчик
+        count += 1
+        # Обновляем максимальную сумму
+        max_sum = max(max_sum, triplet_sum)
+
+# Выводим ответ
+print(count, max_sum)  # 959 97471
+\end{verbatim}
+
+\end{document}
