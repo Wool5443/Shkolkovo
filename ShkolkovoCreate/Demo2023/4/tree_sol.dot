@@ -1,0 +1,72 @@
+
+digraph
+{
+    graph [dpi = 300];
+    rankdir = TB;
+    edge[color = "#f646dc"]
+    node[shape = record, color = "#000000", fontsize = 10, style =     "filled", fillcolor = "#fae2f6", label = ""];
+    bgcolor = "#00000000";
+    root
+    
+    t0[label = "{0|А}"];
+    t1[label = "{1}"];
+    t00[style = invis];
+    t01[style = invis];
+    t10[label = "{10|К}"];
+    t11[label = "{11}"];
+    t000[style = invis];
+    t001[style = invis];
+    t010[style = invis];
+    t011[style = invis];
+    t100[style = invis];
+    t101[style = invis];
+    t110[label = "{110|З}"];
+    t111[label = "{111}"];
+    t0000[style = invis];
+    t0001[style = invis];
+    t0010[style = invis];
+    t0011[style = invis];
+    t0100[style = invis];
+    t0101[style = invis];
+    t0110[style = invis];
+    t0111[style = invis];
+    t1000[style = invis];
+    t1001[style = invis];
+    t1010[style = invis];
+    t1011[style = invis];
+    t1100[style = invis];
+    t1101[style = invis];
+    t1110[label = "{1110|Ч}"];
+    t1111[label = "{1111|Н}"];
+    root->{t0, t1}
+    t0->t00[style = invis];
+    t0->t01[style = invis];
+    t1->t10;
+    t1->t11;
+    t00->t000[style = invis];
+    t00->t001[style = invis];
+    t01->t010[style = invis];
+    t01->t011[style = invis];
+    t10->t100[style = invis];
+    t10->t101[style = invis];
+    t11->t110;
+    t11->t111;
+    t000->t0000[style = invis];
+    t000->t0001[style = invis];
+    t001->t0010[style = invis];
+    t001->t0011[style = invis];
+    t010->t0100[style = invis];
+    t010->t0101[style = invis];
+    t011->t0110[style = invis];
+    t011->t0111[style = invis];
+    t100->t1000[style = invis];
+    t100->t1001[style = invis];
+    t101->t1010[style = invis];
+    t101->t1011[style = invis];
+    t110->t1100[style = invis];
+    t110->t1101[style = invis];
+    t111->t1110;
+    t111->t1111;
+
+}
+    

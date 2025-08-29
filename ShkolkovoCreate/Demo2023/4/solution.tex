@@ -22,5 +22,31 @@
 
 \begin{document}
 
+Для составления слова КАЗАЧКА нам нужно:
+\begin{itemize}
+    \item 3 буквы А \\
+    \item 2 буквы К \\
+    \item 1 буква Ч \\
+    \item 1 буква З \\
+\end{itemize}
+
+Построим двоичное дерево, чтобы посмотреть, какие коды нам доступны:
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{tree_all.png}
+\end{center}
+
+Оптимально взять слеудющие коды:
+\begin{itemize}
+    \item А -- 0 \\
+    \item К -- 10 \\
+    \item Ч -- 1110 \\
+\end{itemize}
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{tree_sol.png}
+\end{center}
+
+Тогда КАЗАЧАЧКА закодируется
+$3 \cdot 1 + 2 \cdot 2 + 3 + 4 = 14$
+знаками.
 
 \end{document}
