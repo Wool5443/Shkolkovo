@@ -1,0 +1,50 @@
+\documentclass[14pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russianb]{babel}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{array}
+\usepackage[pdftex]{graphicx}
+\usepackage{comment}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\usepackage{verbatim}
+
+
+\graphicspath{{images/}}
+\renewcommand{\baselinestretch}{1.3}
+
+\begin{document}
+
+Рассматривая пары, нужно проверить, что хотя бы одно число оканчивается на 2 в пятеричной системе счисления. Для этого можно посмотреть остаток от деления на 5 чисел из пары -- он нам и даст последнюю цифру записи.
+
+\begin{verbatim}
+
+# Откроем файл и считаем числа в список a
+f = open("17__1z92y.txt")
+a = [int(i) for i in f]
+
+# Создадим счётчик и переменную для максимальной суммы
+c = mx = 0
+
+# Перебираем пары соседних элементов
+for i in range(len(a) - 1):
+    # Проверяем, что хотя бы одно число из пары оканчивается на 2 в 5 сс
+    if (a[i] % 5 == 2) or (a[i + 1] % 5 == 2):
+        # Увеличиваем счётчик, если условие прошло
+        c += 1
+        # Обновляем максимальную сумму
+        if a[i] + a[i + 1] > mx:
+            mx = a[i] + a[i + 1]
+
+# Выводим ответ
+print(c, mx)
+
+\end{verbatim}
+
+\end{document}
